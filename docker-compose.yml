@@ -1,0 +1,7 @@
+services:
+  ubuntu:
+    build: $PWD
+    command: /jobs/rand-read.fio
+    volumes:
+      - ./test_folder:/test_folder
+      - ./jobs:/jobs

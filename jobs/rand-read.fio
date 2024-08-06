@@ -1,0 +1,17 @@
+[global]
+ioengine=libaio
+iodepth=32
+direct=1
+invalidate=1
+runtime=60
+size=1g
+end_fsync=1
+
+[rand-read]
+blocksize=64K
+readwrite=randread
+filesize=1M
+numjobs=1000
+directory=/test_folder
+group_reporting
+stonewall
